@@ -1,0 +1,19 @@
+{% load static tailwind_tags %}
+{% load static %} 
+<!DOCTYPE html>
+<head>
+<title>
+    {% block title %}
+    Default title
+    {% endblock %}
+</title>
+<link rel="stylesheet" href="{% static 'style.css'%}">
+    {% tailwind_css %}
+</head>
+<body>
+    <nav>This is our nav bar.</nav>
+    {% block content %}{% endblock %}
+</body>
+
+<!-- We are using a template engine here so that we can write some backend code with the html file 
+ and 'static' is a keyword here not the file name. after this we will also have to make changes in the settings.py file.-->
