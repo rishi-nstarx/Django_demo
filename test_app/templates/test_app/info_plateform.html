@@ -1,0 +1,23 @@
+{% extends 'layout.html' %} 
+{% block title %}
+Serch Info Page
+{% endblock %}
+{% block content %}
+<h1>Info Plateforms</h1>
+<form method="post" class="text-black">
+  {% csrf_token %} {{ form.as_p }}
+  <button
+    type="submit"
+    class="inline-flex items-center w-[10%] justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-orange-600 hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
+  >
+    Search Plateforms
+  </button>
+</form>
+{% if plateforms %}
+<h2>Plateforms with selected Infos</h2>
+<ul>
+  {% for plateform in plateforms %}
+  <li>{{ plateform.name }} - {{ plateform.location }}</li>
+  {% endfor %}
+</ul>
+{% endif %} {% endblock %}

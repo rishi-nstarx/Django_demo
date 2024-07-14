@@ -48,8 +48,8 @@ TAILWIND_APP_NAME = 'theme'
 INTERNAL_IPS = [
     "127.0.0.1",
 ]
-NPM_BIN_PATH = '/usr/bin/npm'
-# NPM_BIN_PATH = r"C:\Program file/etc/etc" This is for windows when you get path structure like this.
+# NPM_BIN_PATH = '/usr/bin/npm'
+NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd" #This is for windows when you get path structure like this.
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
